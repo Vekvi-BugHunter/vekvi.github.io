@@ -1,1 +1,162 @@
-<html><h1>test</h1></html>
+<!--
+Save this file as index.html at the root of a GitHub repo.
+Enable GitHub Pages (branch: main / folder: root) to publish: https://<username>.github.io/<repo>/
+Replace placeholders (NAME, BIO, GITHUB_USERNAME, EMAIL) with your info.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vivek Patil — Hacker Portfolio</title>
+  <meta name="description" content="Hacker-themed portfolio of Vivek Patil. Web pentester and bug hunter." />
+  <style>
+    :root{
+      --bg:#071017; --panel:#0b1620; --accent:#3ef06a; --muted:#6b8a7a; --glass:rgba(255,255,255,0.03);
+      font-sans: 'Courier New', Courier, monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#021018 0%, #071017 60%);color:#c9f9d1;font-family:Courier,monospace}
+    .wrap{max-width:980px;margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;box-shadow:0 6px 30px rgba(2,6,8,0.7);border:1px solid rgba(62,240,106,0.06)}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:72px;height:72px;border-radius:8px;background:linear-gradient(135deg,#031 20%, rgba(62,240,106,0.06));display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:20px;border:1px solid rgba(62,240,106,0.08)}
+    h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    p.lead{color:var(--muted);margin:6px 0 0;font-size:13px}
+    nav{margin-left:auto}
+    .btn{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(62,240,106,0.08);cursor:pointer;color:var(--accent);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+    .panel{background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .terminal{background:linear-gradient(180deg, rgba(0,0,0,0.26), rgba(0,0,0,0.12));padding:14px;border-radius:8px; font-size:13px; color:#b9ffce}
+    .term-line{font-family:monospace;line-height:1.6}
+    .muted{color:var(--muted);font-size:13px}
+
+    ul.skill-list{padding-left:16px;margin:8px 0}
+    .proj{margin-bottom:12px}
+    .link{color:var(--accent);text-decoration:none}
+
+    footer{margin-top:20px;color:var(--muted);font-size:12px;text-align:center}
+
+    /* small screens */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.logo{width:56px;height:56px}.wrap{margin:10px}}
+
+    /* glow effect */
+    .glow{box-shadow:0 0 12px rgba(62,240,106,0.06), inset 0 -3px 14px rgba(0,0,0,0.3)}
+    .pill{display:inline-block;padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);background:var(--glass);font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">VP</div>
+      <div>
+        <h1>Still Updating</h1>
+        <p class="lead">Web pentester. Bug hunter. Offensive-minded engineer.</p>
+      </div>
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#contact" style="margin-left:8px">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="panel glow">
+          <h2 style="margin:0 0 8px">About</h2>
+          <p class="muted">Concise profile. Replace this with your 2-3 sentence summary. Mention specialities like: OWASP, Burp, automated recon, exploit development.</p>
+          <div style="margin-top:12px" class="terminal">
+            <div class="term-line">$ whoami</div>
+            <div class="term-line" id="whoami">Vivek &middot; web pentester</div>
+            <div class="term-line" style="margin-top:8px">$ skills</div>
+            <div class="term-line"><span class="pill">Burp</span> <span class="pill">Recon</span> <span class="pill">XSS</span> <span class="pill">RCE</span> <span class="pill">CORS</span></div>
+          </div>
+        </section>
+
+        <section id="projects" class="panel" style="margin-top:14px">
+          <h2 style="margin:0 0 8px">Selected projects & findings</h2>
+          <div class="proj">
+            <strong>Example: ViewState deserialization case study</strong>
+            <div class="muted">Proof, PoC and remediation notes. Add links to reports or GitHub gists.</div>
+            <div style="margin-top:6px"><a class="link" href="#">View writeup</a></div>
+          </div>
+          <div class="proj">
+            <strong>Recon automation</strong>
+            <div class="muted">Scripts that parse crawls and extract endpoints for fuzzing.</div>
+            <div style="margin-top:6px"><a class="link" href="#">Repo</a></div>
+          </div>
+        </section>
+
+        <section id="notes" class="panel" style="margin-top:14px">
+          <h2 style="margin:0 0 8px">Quick Notes</h2>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Public POCs are redacted until disclosure.</li>
+            <li>Responsible disclosure practiced.</li>
+            <li>Available for contract pentests.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <div class="panel">
+          <h3 style="margin:0 0 8px">Contact</h3>
+          <div class="muted">GitHub / Email / Links</div>
+          <p style="margin:10px 0 0">GitHub: <a class="link" id="gh-link" href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+          <p style="margin:6px 0">Email: <span id="email">vivek[at]example.com</span> <button class="btn" id="copyBtn" style="margin-left:8px;padding:6px">Copy</button></p>
+          <div style="margin-top:12px">
+            <a class="btn" href="#" id="resumeBtn">Download CV</a>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h3 style="margin:0 0 8px">Tech</h3>
+          <ul class="skill-list muted">
+            <li>Burp Suite</li>
+            <li>ffuf / dirsearch</li>
+            <li>Python / Go scripting</li>
+            <li>Docker / CI</li>
+          </ul>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h3 style="margin:0 0 8px">Live</h3>
+          <div class="muted">Last action log</div>
+          <div style="margin-top:8px;font-family:monospace;font-size:13px;color:#9ffac0">$ git clone repo
+$ ./recon.sh --quick
+$ burp --project</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>Made for offensive research. Replace placeholder content before public disclosure.</div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('copyBtn').addEventListener('click', function(){
+      const txt = document.getElementById('email').innerText.replace('[at]','@');
+      navigator.clipboard.writeText(txt).then(()=>{this.innerText='Copied'}).catch(()=>{this.innerText='Copy'});
+    });
+
+    // typing effect for whoami
+    (function(){
+      const target = document.getElementById('whoami');
+      const txt = 'Vivek · web pentester';
+      target.innerText='';
+      let i=0; function step(){ if(i<=txt.length){ target.innerText = txt.slice(0,i); i++; setTimeout(step,40)} }
+      step();
+    })();
+
+    // quick replace helpers for user
+    // Replace placeholders automatically if query params present: ?name=...&gh=...&email=...
+    (function(){
+      const params = new URLSearchParams(location.search);
+      if(params.get('name')) document.querySelector('h1').innerText = params.get('name');
+      if(params.get('bio')) document.querySelector('.lead').innerText = params.get('bio');
+      if(params.get('gh')) { document.getElementById('gh-link').href = 'https://github.com/'+params.get('gh'); document.getElementById('gh-link').innerText = 'github.com/'+params.get('gh'); }
+      if(params.get('email')) document.getElementById('email').innerText = params.get('email').replace('@','[at]');
+    })();
+  </script>
+</body>
+</html>
